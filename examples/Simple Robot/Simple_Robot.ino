@@ -1,19 +1,19 @@
 #include <RMC.h>
 
-Robot ROB;
+Robot Robbie;
 
 void setup() {
-  ROB.Claw(10);
-  ROB.Bumper(9);
-  ROB.RightWheel(1,2,3,4);
-  ROB.LeftWheel(5,6,7,8);
+  Robbie.Bumper(8);
+  Robbie.RightWheel(9,10);
+  Robbie.LeftWheel(11,13);
 }
 
 void loop() {
-  if(ROB.BumpedIntoSomething())
+  if(Robbie.BumpedIntoSomething())
   {
-    ROB.TurnRight();
+    Robbie.GoBackwards(100);
+    Robbie.TurnRight();
   } else {
-    ROB.Step();
+    Robbie.Step();
   }
 }
